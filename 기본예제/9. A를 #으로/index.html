@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = "";
+
+        for (const char of str) {
+          console.log(char);
+          if (char === "A") answer += "#";
+          else {
+            answer += char;
+          }
+        }
+
+        return answer;
+      }
+
+      console.log(solution("BANANA"));
+    </script>
+  </body>
+</html>

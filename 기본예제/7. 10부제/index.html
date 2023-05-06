@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let answer = 0;
+        arr.forEach((element) => {
+          if (String(element)[1] === String(n)) answer++;
+        });
+        return answer;
+      }
+
+      console.log(solution(0, [12, 20, 54, 30, 87, 91, 30]));
+    </script>
+  </body>
+</html>

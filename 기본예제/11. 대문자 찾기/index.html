@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str, char) {
+        let answer = 0;
+
+        [...str].forEach((element) => {
+          if (char === element) {
+            answer++;
+          }
+        });
+
+        return answer;
+      }
+
+      console.log(solution("COMPUTERPROGRAMMING", "R"));
+    </script>
+  </body>
+</html>
