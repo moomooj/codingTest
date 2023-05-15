@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = "";
+        let s = "";
+        let num = 1;
+        for (const char of str) {
+          if (s !== char) {
+            s = char;
+            if (num !== 1) answer += num;
+            num = 1;
+            answer += char;
+          } else {
+            num++;
+          }
+        }
+        return answer;
+      }
+
+      console.log(solution("KKHSSSSSSSE"));
+    </script>
+  </body>
+</html>

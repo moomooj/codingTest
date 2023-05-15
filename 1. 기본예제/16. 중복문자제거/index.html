@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = "";
+        for (const char of str) {
+          if (answer.indexOf(char) === -1) {
+            answer += char;
+          }
+        }
+        return answer;
+      }
+
+      console.log(solution("ksekkset"));
+    </script>
+  </body>
+</html>

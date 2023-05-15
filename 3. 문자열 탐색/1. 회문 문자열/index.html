@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = "YES",
+          len = str.length;
+        str = str.toLowerCase();
+
+        for (let i = 0; i < Math.floor(len / 2); i++) {
+          if (str[i] !== str[len - i - 1]) answer = "NO";
+        }
+
+        return answer;
+      }
+      /* reverse 사용
+      function solution(str) {
+        let answer = "YES";
+        str = str.toLowerCase();
+        if (str !== str.split("").reverse().join("")) answer = "NO";
+        return answer;
+      }*/
+
+      console.log(solution("gooG"));
+    </script>
+  </body>
+</html>

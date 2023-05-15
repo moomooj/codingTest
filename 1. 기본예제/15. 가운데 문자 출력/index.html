@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let mid = Math.floor(str.length / 2);
+
+        if (str.length % 2 === 0) {
+          return `${str[mid - 1]}${str[mid]}`;
+        } else {
+          return str[mid];
+        }
+        return;
+      }
+
+      console.log(solution("stusdy"));
+    </script>
+  </body>
+</html>
