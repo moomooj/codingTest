@@ -7,7 +7,7 @@
     <script>
       function isPrime(num) {
         if (num === 1) return false;
-        for (let i = 2; i < parseInt(Math.sqrt(num)); i++) {
+        for (let i = 2; i < Math.floor(Math.sqrt(num)); i++) {
           if (num % i === 0) return false;
         }
         return true;
@@ -16,14 +16,14 @@
       function solution(arr) {
         let answer = [];
 
-        for (let char of arr) {
+        for (let s of arr) {
           let res = 0;
-          while (char) {
-            let t = char % 10;
-            res = res * 10 + t;
-            char = parseInt(char / 10);
-          }
 
+          while (s) {
+            let t = s % 10;
+            res = res * 10 + t;
+            s = Math.floor(s / 10);
+          }
           if (isPrime(res)) answer.push(res);
         }
 

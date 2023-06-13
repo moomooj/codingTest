@@ -37,12 +37,11 @@
             .split("")
             .reduce((a, b) => a + Number(b), 0);
 
-          if (sum >= max) {
+          if (max <= sum) {
             max = sum;
             answer.push(x);
           }
         }
-
         return Math.max(...answer);
       }
 
