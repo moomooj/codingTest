@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str1, str2) {
+        let answer = "YES",
+          str1H = new Map();
+
+        for (let char of str1) {
+          if (str1H.has(char)) str1H.set(char, str1H.get(char) + 1);
+          else {
+            str1H.set(char, 1);
+          }
+        }
+
+        for (let char of str2) {
+          if (!str1H.has(char) || str1H.get(char) === 0) return "NO";
+          str1H.set(char, str1H.get(char) - 1);
+        }
+
+        return answer;
+      }
+
+      console.log(solution("AbaAeCe", "baeeACA"));
+      console.log(solution("abaCC", "Caaab"));
+    </script>
+  </body>
+</html>

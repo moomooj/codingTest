@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer,
+          strH = new Map();
+        for (let char of str) {
+          if (strH.has(char)) strH.set(char, strH.get(char) + 1);
+          else strH.set(char, 1);
+        }
+        let max = Number.MIN_SAFE_INTEGER;
+        for (const [key, val] of strH) {
+          if (val > max) {
+            max = val;
+            answer = key;
+          }
+        }
+
+        return answer;
+      }
+
+      console.log(solution("BACBACCACCBDEDE"));
+    </script>
+  </body>
+</html>
