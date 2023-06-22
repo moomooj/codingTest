@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(size, arr) {
+        let answer = Array.from({ length: size }, () => 0);
+        arr.forEach((x) => {
+          let tmp = false;
+          for (let i = 0; i < answer.length; i++) {
+            if (answer[i] === x) tmp = true;
+          }
+          if (tmp) {
+            answer.splice(answer.indexOf(x), 1);
+          } else {
+            answer.pop();
+          }
+          answer.unshift(x);
+        });
+
+        return answer;
+      }
+
+      console.log(solution(5, [1, 2, 3, 2, 6, 2, 3, 5, 7]));
+    </script>
+  </body>
+</html>

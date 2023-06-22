@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(need, plan) {
+        let answer = "YES";
+        let arr = need.split("");
+        for (let x of plan) {
+          if (arr.includes(x)) {
+            if (x !== arr.shift()) return "NO";
+          }
+        }
+        if (arr.length > 0) return "NO";
+        return answer;
+      }
+
+      console.log(solution("CBA", "CBDAGE"));
+    </script>
+  </body>
+</html>
